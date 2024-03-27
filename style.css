@@ -1,0 +1,223 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+
+body{
+    overflow-x: hidden;
+}
+
+
+h1 ,h2,h3,h4,h5,h6 , .h1,.h2,.h3,.h4,.h5,.h6{
+    font-family: "Anton", sans-serif;
+}
+
+
+:root{
+    --black: rgb(26,26,26);
+    --white: rgb(250,250,250);
+    --violet: rgb(87, 74, 130);
+}
+
+.bg-Black{
+    background-color: var(--Black);
+}
+.bg-White{
+    background-color: var(--White);
+}
+.bg-Gold{
+    background-color: var(--Gold);
+}
+
+.txt-Black{
+    color: var(--Black);
+}
+.txt-White{
+    color: var(--White);
+}
+.txt-Gold{
+    color: var(--Gold);
+}
+
+
+
+.nav-link{
+    border-bottom: 2px solid transparent;
+}
+
+.navbar{
+    background-color: var(--white);
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.nav-blur{
+    -webkit-backdrop-filter: blur(5px) saturate(0.8);
+    -moz-backdrop-filter: blur(5px) saturate(0.8);
+    backdrop-filter: blur(5px) saturate(0.8);
+    background: rgba(89, 52, 100, 0.639) ;
+    border: 3px solid var(--violet);
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* li:hover {
+    border-bottom: 3px solid var(--violet);
+} */
+
+
+.form-control{
+    border: 4px solid var(--violet);
+}
+
+
+.btn-search{
+    height: 40px;
+    border: unset;
+    border-radius: 12px;
+    color: var(--black);
+    background: transparent;
+    z-index: 10;
+    position: relative;
+    transition: all 250ms;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+
+.header{
+    height: 650px;
+    width: 100%;
+    background-image: url(./media/sfondoviola.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.button {
+    --offset: 8px;
+    --border-size: 2px;
+    display: block;
+    position: relative;
+    padding: 1.2em 2.4em;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+    transition: background .8s ease;
+    margin-bottom: var(--offset);
+}
+
+.input-field {
+    --offset: 8px;
+    width: calc(100% - 8px);
+    padding: 0.8em 1.6em;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-bottom: var(--offset);
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.container .button {
+    margin-bottom: var(--offset);
+}
+
+.button:hover {
+    background: rgba(100, 0, 0, .03);
+}
+.button__horizontal,
+.button__vertical {
+    position: absolute;
+    top: var(--horizontal-offset, 0);
+    right: var(--vertical-offset, 0);
+    bottom: var(--horizontal-offset, 0);
+    left: var(--vertical-offset, 0);
+    transition: transform .8s ease;
+    will-change: transform;
+}
+.button__horizontal::before,
+.button__vertical::before {
+    content: '';
+    position: absolute;
+    border: inherit;
+}
+.button__horizontal {
+    --vertical-offset: calc(var(--offset) * -1);
+    border-top: var(--border-size) solid currentcolor;
+    border-bottom: var(--border-size) solid currentcolor;
+}
+.button__horizontal::before {
+    top: calc(var(--vertical-offset) - var(--border-size));
+    bottom: calc(var(--vertical-offset) - var(--border-size));
+    left: calc(var(--vertical-offset) * -1);
+    right: calc(var(--vertical-offset) * -1);
+}
+.button:hover .button__horizontal {
+    transform: scaleX(0);
+}
+.button__vertical {
+    --horizontal-offset: calc(var(--offset) * -1);
+    border-left: var(--border-size) solid currentcolor;
+    border-right: var(--border-size) solid currentcolor;
+}
+.button__vertical::before {
+    top: calc(var(--horizontal-offset) * -1);
+    bottom: calc(var(--horizontal-offset) * -1);
+    left: calc(var(--horizontal-offset) - var(--border-size));
+    right: calc(var(--horizontal-offset) - var(--border-size));
+}
+.button:hover .button__vertical {
+    transform: scaleY(0);
+}
+
+.story{
+    color: var(--black);
+}
+
+.numbers{
+    font-size: 20px;
+}
+
+.img3{
+    width: 100%;
+}
+
+.lead{
+    margin-top: 40px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+h2{
+    font-size: 62px;
+    color: var(--white);
+}
+
+.col1{
+    background-color: var(--black);
+}
