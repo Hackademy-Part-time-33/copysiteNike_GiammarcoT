@@ -14,11 +14,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- CDN FONTAWESOME -->
     <script src="https://kit.fontawesome.com/75b12c4b2e.js" crossorigin="anonymous"></script>
-    <!-- CDN SWIPER -->
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
     <!-- MY STYLE -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -36,10 +31,10 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#">Home</a>
+                        <a class="nav-link " aria-current="page" href="/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/annunci.html">Shop</a>
+                        <a class="nav-link" href="#">Shop</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Donna</a>
@@ -68,119 +63,52 @@
     </nav>
     <!-- FINE NAVBAR -->
     
+    <h1 class="mt-5 pt-5 text-center">LISTA PRODOTTI</h1>
     
-    <!-- HEADER -->
-    <div class=" header row d-flex align-items-center m-0">
-        <div class="col-12 col-md-6 d-flex justify-content-center">
-            <img src="/media/logo-bianco.png" alt="logo viola" class="img-fluid">
+    <div class="row">
+        <div class="col-12 col-md-2 d-flex flex-column align-items-center mt-5">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="check_scarpe">
+                <label class="form-check-label" for="check_scarpe">
+                  scarpe
+                </label>
+              </div>
+              <div class="form-check mt-5">
+                <input class="form-check-input" type="checkbox" value="" id="check_felpe">
+                <label class="form-check-label" for="check_felpe">
+                  felpe
+                </label>
+              </div>
+              <div class="form-check mt-5">
+                <input class="form-check-input" type="checkbox" value="" id="check_maglie">
+                <label class="form-check-label" for="check_maglie">
+                  Maglie
+                </label>
+              </div>
+              <div class="form-check mt-5">
+                <input class="form-check-input" type="checkbox" value="" id="check_pantaloni">
+                <label class="form-check-label" for="check_pantaloni">
+                  Pantaloni
+                </label>
+              </div>
+              <div class="form-check mt-5">
+                <input class="form-check-input" type="checkbox" value="" id="check_giacche">
+                <label class="form-check-label" for="check_giacche">
+                  Giacche
+                </label>
+              </div>
+              <div class="form-check mt-5">
+                <input class="form-check-input" type="checkbox" value="" id="check_tute">
+                <label class="form-check-label" for="check_tute">
+                  Tute
+                </label>
+              </div>
         </div>
-        <!-- FORM DI RICERCA -->
-        <div class="col-12 col-md-6 d-flex justify-content-end">
-            <form class="d-flex search pe-3 flex-column flex-md-row ms-3 ms-md-0" role="search">
-                <input class="form-control me-2 rounded-pill mb-4 mb-md-0 formBorder" type="search" placeholder="t-shirt,  scarpe..." aria-label="Search">
-                <button class="buttonS" type="submit">
-                    cerca
-                    <div class="button__horizontal"></div>
-                    <div class="button__vertical"></div>
-                </button>
-            </form>
+        <div class="annunci col-12 col-md-10">
         </div>
     </div>
-    <!-- FINE HEADER -->
     
-    
-    <main>
-        <!-- PRIMA SEZIONE STORIA CON ANIMAZIONE FADE IN DI AOS -->
-        <section>
-            <div class="row">
-                <div class="col-12 col-md-6" data-aos="fade-right" data-aos-duration="1000">
-                    <img src="/media/nikestoryimg.png" alt="" class="img-fluid p-0 m-0">
-                </div>
-                
-                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-wrap m-0 p-4" data-aos="fade-left" data-aos-duration="1000">
-                    <h2 class="story">LA NOSTRA STORIA</h2>
-                    <p>Creare un marchio di successo non è una passeggiata, ma spesso basta essere perseveranti nei propri sogni, progetti ed obiettivi e seguire una semplice sensazione o un’intuizione per ottenere successi davvero inaspettati. È quello che è successo al fondatore del marchio Nike, Phil Knight.
-                        
-                        Philip Hampson Knight nacque a Portland, in Oregon. Dopo essersi laureato in contabilità all’Università dell’Oregon, all’inizio degli anni 60 intraprese un viaggio intorno al mondo, che tra le varie tappe, lo portò a fermarsi a Kobe, in Giappone. Amante dello sport e della corsa fin da ragazzo, una volta giunto nella città nipponica, scoprì le scarpe da corsa Tiger, al tempo prodotte dalla Onitsuka Co Ltd, oggi diventata Asics e notò subito che si trattava di un prodotto di altissima qualità che veniva venduto ad un prezzo molto contenuto.
-                        
-                        Le vendite del prodotto Onitsuka ebbero un successo inaudito, ma nel 1971 Philip e Bill decisero di creare un marchio tutto loro e di cambiare il nome dell'azienda in Nike!
-                    </p>
-                </div>
-            </div>
-        </section>
-        
-        
-        <!-- SECONDA SEZIONE CONTATORE NUMERI E ANIMAZIONE FLIP DI AOS -->
-        <section>
-            <div class="row">
-                <div class="col1 col-12 col-md-6 d-flex align-items-center justify-content-center" data-aos="flip-left" data-aos-duration="2000">
-                    <section class="container mt-5">
-                        <div class="row flex-column w-100 d-flex align-items-center justify-content-center">
-                            <div class="col-12 col-md-6 w-100">
-                                <h2 class="text-center">
-                                    Cosa dicono i numeri!
-                                </h2>
-                            </div>
-                            <div class="col-12 col-md-6 numbers w-100">
-                                <p class="lead text-center mt-5">
-                                    <span id="firstNumber" class="numbers pe-3 cnt">0</span> CLIENTI SODDISFATTI
-                                </p>
-                                <p class="lead text-center">
-                                    <span id="secondNumber" class="numbers pe-3 cnt">0</span> PRODOTTI VENDUTI
-                                </p>
-                                <p class="lead text-center">
-                                    <span id="thirtNumber" class="numbers pe-3 cnt">0</span> AZIENDE PARTNER
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="container-fluid col-12 col-md-6 m-0 p-0">
-                    <img src="/media/nikeimg.jpg" alt="" class="img3 img-fluid p-0 m-0">
-                </div>
-            </div>
-        </section>
-        
-        
-        <!-- SLIDE DI SWIPER -->
-        <div class="swiper mySwiper w-75 my-5">
-            <div class="parallax-bg";
-            " data-swiper-parallax="-23%"></div>
-            <div class="swiper-wrapper">
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </main>
-    
-    <!-- FORM PER RECENSIONE -->
-    <section class="container my-5 py-5 bg-dark text-white">
-        <div class="row flex">
-            <div class="col-12 col-md-5 d-flex align-items-center">
-                <h1> Lasciaci la tua recensione!</h1>
-            </div>
-            <div class="col-12 col-md-5">
-                <div>
-                    <label for="userName">Inserisci nome</label>
-                    <input type="text" id="userName" class="form-control">
-                </div>
-                <div>
-                    <label for="userTitle">Inserisci titolo</label>
-                    <input type="text" id="userTitle" class="form-control">
-                </div>
-                <div>
-                    <label for="userDescription">Inserisci recensione</label>
-                    <textarea class="form-control" id="userDescription"></textarea>
-                </div>
-                <div class="d-flex justify-content-end mt-2">
-                    <button class="btn" id="addReview" type="submit">INVIA</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <ul class="list-unstyled d-flex flex-row me-5 pe-5 justify-content-center ms-5 ps-5">
+    <ul class="list-unstyled d-flex flex-row me-5 pe-5 justify-content-center ms-5 ps-5 mt-5">
         <li class="ms-3"><i class="fa-brands fa-instagram fa-2x"></i><use xlink:href="#instagram"></use></svg></a></li>
         <li class="ms-3"><i class="fa-brands fa-facebook fa-2x"></i><use xlink:href="#facebook"></use></svg></a></li>
         <li class="ms-3"><i class="fa-brands fa-twitter fa-2x"></i><use xlink:href="#twitter"></use></svg></a></li>
@@ -248,9 +176,7 @@
     </script>
     <!-- CDN BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- CDN SWIPER -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- MY SCRIPT -->
-    <script src="main.js"></script>
+    <script src="/annunci.js"></script>
 </body>
 </html>
