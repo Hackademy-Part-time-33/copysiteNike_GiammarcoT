@@ -22,21 +22,21 @@
     <!-- MY STYLE -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light-mode">
     
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-md">
-        <div class="container-fluid m-0 p-0">
+     <!-- NAVBAR -->
+     <nav class="navbar navbar-expand-md container-fluid">
+        <div class="container-fluid m-0 p-0 vw-100">
             <a class="navbar-brand" href="#">
                 <img src="/media/Logo_NIKE.svg.png" alt="Logo del sito" class="logo img-fluid img-Logo p-3">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler m-0 p-0 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon me-md-0"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ms-3 ms-md-0">
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#">Home</a>
+                        <a class="nav-link " aria-current="page" href="/index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/annunci.html">Shop</a>
@@ -51,15 +51,20 @@
                         <a class="nav-link" href="#">Bambino</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-3 ms-md-0">
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item me-0">
                         <a class="nav-link" href="#">
                             <i class="fa-solid fa-right-to-bracket"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item me-0 me-md-4">
+                        <a id="btnDark" class="nav-link" href="#">
+                            <i class="fa-solid fa-moon"></i>
                         </a>
                     </li>
                 </ul>
@@ -75,7 +80,7 @@
             <img src="/media/logo-bianco.png" alt="logo viola" class="img-fluid">
         </div>
         <!-- FORM DI RICERCA -->
-        <div class="col-12 col-md-6 d-flex justify-content-end">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
             <form class="d-flex search pe-3 flex-column flex-md-row ms-3 ms-md-0" role="search">
                 <input class="form-control me-2 rounded-pill mb-4 mb-md-0 formBorder" type="search" placeholder="t-shirt,  scarpe..." aria-label="Search">
                 <button class="buttonS" type="submit">
@@ -155,7 +160,7 @@
     </main>
     
     <!-- FORM PER RECENSIONE -->
-    <section class="container my-5 py-5 bg-dark text-white">
+    <section class="container-fluid my-5 py-5 bg-dark text-white w-75">
         <div class="row flex">
             <div class="col-12 col-md-5 d-flex align-items-center">
                 <h1> Lasciaci la tua recensione!</h1>
@@ -226,7 +231,7 @@
                     <h5>Registrati alla nostra newsletter!</h5>
                     <p>Riceverai novità, promozioni e tanto altro!</p>
                     <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                        <label for="newsletter1" class="visually-hidden">Email address</label>
+                        <label for="newsletter1" class="visually-hidden">indirizzo e-mail</label>
                         <input id="newsletter1" type="text" class="form-control formBorder" placeholder="Email address">
                         <button class="btn" type="button">Subscribe</button>
                     </div>
