@@ -152,8 +152,8 @@ btnDark.addEventListener("click", () =>{
     isClicked = false;
     localStorage.setItem('mode', 'dark');
   } else{ //LIGHT MODE
-    document.documentElement.style.setProperty('--light', 'rgb(26,26,26)');
-    document.documentElement.style.setProperty('--dark', 'rgb(250,250,250)');
+    document.documentElement.style.setProperty('--light', 'rgb(250,250,250)');
+    document.documentElement.style.setProperty('--dark', 'rgb(26,26,26)');
     btnDark.innerHTML = `<i class="fa-solid fa-moon"></i>`;
     isClicked = true;
     localStorage.setItem('mode', 'light');

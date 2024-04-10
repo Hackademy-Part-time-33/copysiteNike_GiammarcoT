@@ -208,9 +208,7 @@ li:hover {
     transform: scaleY(0);
 }
 
-.story{
-    color: var(--black);
-}
+
 
 .numbers{
     font-size: 20px;
@@ -229,7 +227,6 @@ li:hover {
 
 h2{
     font-size: 62px;
-    color: var(--white);
 }
 
 .col1{
