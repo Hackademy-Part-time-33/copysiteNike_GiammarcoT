@@ -42,7 +42,6 @@ h1 ,h2,h3,h4,h5,h6 , .h1,.h2,.h3,.h4,.h5,.h6{
     color: var(--Gold);
 }
 
-
 .light-mode{
  background-color: var(--light);
  color: var(--dark);
@@ -108,7 +107,7 @@ li:hover {
 
 
 .header{
-    height: 650px;
+    height: 800px;
     width: 100%;
     background-image: url(./media/sfondoviola.jpg);
     background-size: cover;
@@ -309,13 +308,17 @@ h2{
   }
 
   #accordionExample .accordion-header .accordion-button {
-    border-color: red; /* Cambia il colore del bordo */
+    border-color: red;
 }
 
 .categoryCard{
-    color: #bebebe !important;
+    color: #ffffff !important;
 }
 
 input[type="range"]::-webkit-slider-thumb {
     background-color: var(--violet); 
+}
+
+.footer_link{
+    color: var(--violet) !important;
 }

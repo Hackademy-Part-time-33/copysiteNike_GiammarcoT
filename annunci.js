@@ -1,4 +1,3 @@
-
 // ANIMAZIONE CAMBIO COLORI DELLA NAV DOPO LO SCROLL
 let navbar = document.querySelector(".navbar");
 let links = document.querySelectorAll(".nav-link");
@@ -25,21 +24,16 @@ function changeNavbar(background, color1, color2, color3) {
             link.style.borderBottom = color3;
         });
     });
-} 
+}
 
-localStorage()
-
-// OTTENERE I DATI DA "ANNUNCI.JSON"
-
-fetch("./annunci.json")
+// OTTENERE I DATI DAL DATABASE
+fetch("http://127.0.0.1:8000/api/products")
 .then((response) => response.json())
 .then((data) => {
-    
-    
     let setCategory = () => {
         // CREAZIONE ARRAY CON LE CATEGORIE
         let category = data.map((annuncio)=> annuncio.category);
-        
+
         // CREAZIONE ARRAY CON CATEGORIE FILTRATE
         let filteredCategory = [];
         category.forEach(category => {
@@ -48,32 +42,27 @@ fetch("./annunci.json")
                 filteredCategory.push(category);
             }
         });
-        
+
         // CREAZIONE SWITCH CATEGORIE
         let category_wrapper = document.querySelector('.category_wrapper');
-        
+
         filteredCategory.forEach((category) => {
             let div = document.createElement('div');
             div.classList.add('form-check');
             div.innerHTML = `
-            
             <input class="form-check-input" type="radio" name="category" id="${category}">
             <label class="form-check-label" for="${category}">
             ${category}
             </label>`
-            
-            
             category_wrapper.appendChild(div)
         });
-        
     }
     setCategory();
-    
+
     // CREAZIONE DELLE CARD
     let card_wrapper = document.querySelector('.card_wrapper');
-    
+
     let showCards = (array) => {
-        
         array.sort((a,b) => b.price - a.price);
         card_wrapper.innerHTML = '';
         array.forEach((annuncio) => {
@@ -81,24 +70,21 @@ fetch("./annunci.json")
             div.classList.add('card');
             div.style.width = '18rem';
             div.innerHTML = `
-            
             <img src="${annuncio.image}" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">${annuncio.name}</h5>
             <p class="card-text categoryCard">${annuncio.category}</p>
             <p>${annuncio.price}€</p>
             <a href="#" class="btn btn-primary">aggiungi al carrello</a>
-            </div>
-            `
-            
+            </div>`
             card_wrapper.appendChild(div);
         });
     }
     showCards(data);
-    
+
     // FILTRO PER CATEGORIA
     let radios = document.querySelectorAll('.form-check-input');
-    
+
     let FilterByCategory = () => {
         let checked = Array.from(radios).find((button)=>button.checked);
         let categoria = checked.id
@@ -108,16 +94,15 @@ fetch("./annunci.json")
         }else{
             showCards(data);
         }
-        
     }
     FilterByCategory();
-    
+
     radios.forEach((button)=>{
         button.addEventListener('click', () => {
             FilterByCategory();
         })
     });
-    
+
     // FILTRO PER PREZZO
     let inputPrice = document.querySelector('#inputPrice');
     let priceNumber = document.querySelector('#priceNumber');
@@ -128,12 +113,12 @@ fetch("./annunci.json")
         priceNumber.innerHTML = `${maxPrice}€`
     }
     setPriceInput()
-    
+
     inputPrice.addEventListener("input", ()=>{
         priceNumber.innerHTML = inputPrice.value;
         filterByPrice();
     })
-    
+
     let filterByPrice = () => {
         let filtered = data.filter((annuncio)=> +annuncio.price <= +inputPrice.value);
         showCards(filtered);
